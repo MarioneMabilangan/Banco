@@ -6,7 +6,6 @@ import jakarta.persistence.*;
 @Table(name = "Comptes")
 public class Comptes {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "cuenta")
     private String cuenta;
 
@@ -14,10 +13,11 @@ public class Comptes {
     private int ingresoInicial;
 
     @ManyToOne
-    @JoinColumn(name = "dni", referencedColumnName = "dni")
+    @JoinColumn(name = "id_client", referencedColumnName = "dni")
     private Clients clientsByIdClients;
 
-    public Comptes(int ingresoInicial, Clients clientsByIdClients) {
+    public Comptes(String cuenta, int ingresoInicial, Clients clientsByIdClients) {
+        this.cuenta = cuenta;
         this.ingresoInicial = ingresoInicial;
         this.clientsByIdClients = clientsByIdClients;
     }

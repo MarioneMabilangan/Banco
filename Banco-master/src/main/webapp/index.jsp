@@ -23,7 +23,7 @@
 </head>
 <body>
 <h1>Banco DAM2</h1>
-<form id="form" action="${pageContext.request.contextPath}/create" method="post">
+<form id="form" action="create.do" method="post">
     <label for="nombre_cliente">Nombre Cliente:</label>
     <input type="text" id="nombre_cliente" name="nombre_cliente"><br>
 
@@ -42,8 +42,8 @@
     <label for="ingreso_inicial">Ingreso inicial (€):</label>
     <input type="number" id="ingreso_inicial" name="ingreso_inicial"><br>
 
-    <button type="submit" name="submit" value="crear_cliente">Crear Cliente</button>
-    <button type="submit" name="submit" value="mostrar_cliente">Mostrar Cliente</button>
+    <button type="submit" name="submit_action" value="crearcliente">Crear Cliente</button>
+    <button type="submit" name="submit_action" value="mostrarcliente">Mostrar Cliente</button>
 </form>
 </body>
 </html>

@@ -2,7 +2,9 @@ package com.example.banco.modelo;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -18,7 +20,7 @@ public class Clients {
     private String pais;
 
     @OneToMany(mappedBy = "clientsByIdClients")
-    private Collection<Comptes> compteByIdCompte;
+    private List<Comptes> compteByIdCompte = new ArrayList<>();
 
     public Clients() {
     }
@@ -61,11 +63,11 @@ public class Clients {
         this.pais = pais;
     }
 
-    public Collection<Comptes> getCompteByIdCompte() {
+    public List<Comptes> getCompteByIdCompte() {
         return compteByIdCompte;
     }
 
-    public void setCompteByIdCompte(Collection<Comptes> compteByIdCompte) {
+    public void setCompteByIdCompte(List<Comptes> compteByIdCompte) {
         this.compteByIdCompte = compteByIdCompte;
     }
 

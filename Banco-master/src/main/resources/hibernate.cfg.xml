@@ -33,7 +33,7 @@
 
         <!-- Mantenimiento de la BBDD -->
 
-        <property name="hbm2ddl.auto">update</property>
+
 
         <!-- opciones de hbm2dll:
         create : Borra y crea SIEMPRE la base de datos
@@ -48,7 +48,8 @@
         <!-- Ficheros de mapeo. Pueden combinarse-->
 
         <!-- Mapeo DENTRO DE LA CLASE -->
-
+        <mapping class="com.example.banco.modelo.Clients"/>
+        <mapping class="com.example.banco.modelo.Comptes"/>
 
 
 
